@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Product Summary</title>
+</head>
+<body>
+        <!-- Top Navbar -->
+        <div class="custom-navbar navbar-light bg-light sticky-top">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Hamburger Menu -->
+                <button class="btn btn-light" id="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                
+                <!-- Small Logo -->
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="https://echobooom.com/wp-content/uploads/2021/01/ECHOBOOOM-LOGO-1.png" alt="Logo">
+                </a>
+        
+                <!-- Cart Icon -->
+                <button class="btn btn-light ms-auto" id="toggleCartSidebar" disabled>
+                    <i class="bi bi-cart-fill" style="margin-left: 20px; font-size: 25px;"></i>
+                </button>
+            </div>
+        </div>
+        </div>
+        <div id="wrapBox_existingcustomer" class="container-fluid p-3">
+            <div class="container-fluid mt-1" id="daily_data_box" style="width: auto; background-color: rgb(29, 29, 29); height: 50px; border-radius: 10px 10px 0px 0px;">
+                <h5 class="text-center" style="color: white; line-height: 50px; font-weight: 400;">Product Summary</h5>
+            </div>
+            <div class="container-fluid p-3" style="width:auto; height: 250px; background-color: white; border-radius: 0px 0px 10px 10px;">
+                <div class="d-flex">
+                    <h3>Billing Summary</h3>
+                    <a href="#"> <i class="bi bi-pencil-square" style="font-size: 20px; margin-left: 10px;"></i> </a> 
+                </div>
+                <hr style="border: 1px solid grey; margin: 0;">
+                <ul class="list-group mt-3">
+                    <li class="list-group-item" aria-current="true">Business Name:</li>
+                    <li class="list-group-item">Phone Number:</li>
+                    <li class="list-group-item">Email ID:</li>
+                    <li class="list-group-item">Customer Name:</li>
+                  </ul>
+            </div>
+            <div class="container-fluid p-3 mt-2" style="width:auto; height: 410px; background-color: white; border-radius: 10px;">
+                <h3>Products in Cart</h3>
+                <hr style="border: 1px solid grey; margin: 0;">
+                <!--Product in Cart Dummy-->
+                <div class="card mt-3">
+                    <div class="card-header" style="font-weight: 600;">
+                        <a href="#"><i class="bi bi-trash3-fill"></i></a>
+                      Product 1 - Name and Logo Card
+                    </div>
+                    <div class="card-body">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Product Price
+                          <span class="badge bg-primary rounded-pill">₹ 2500</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Quantity
+                          <span style="color: black;" class="badge bg-warning rounded-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center mb-1">
+                            Incl. GST
+                          <span class="badge bg-danger rounded-pill">18 %</span>
+                        </li>
+                        <hr style="border: 1px solid grey; margin: 0;">
+                        <li class="list-group-item d-flex justify-content-between align-items-center mt-1">
+                            Grand Total
+                          <span class="badge bg-success rounded-pill">₹ 3,068</span>
+                        </li>
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mt-2">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#otpmodal"> Place Order </button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#proposalmodal"> Send Proposal </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proformainvmodal"> Send Proforma Invoice </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal - After Place Order is clicked-->
+        <div class="modal" tabindex="-1" id="otpmodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">OTP Authentication Required</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="otp-request-text">Request OTP to process further</p>
+                  <a href="#" id="send-verification-btn" class="btn btn-primary">Send Verification Code</a>
+          
+                  <!-- Elements that should appear after clicking "Send Verification Code" -->
+                  <div id="otp-verification-section" style="display:none; margin-top: 15px;">
+                    <label>Verification Code has been sent to the customer's mobile and email address</label>
+                    <input type="tel" maxlength="6" class="form-control mt-2" placeholder="Enter 6-digit OTP">
+                    <a href="#" class="btn btn-success mt-3">Verify Order</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Proposal Sent modal-->
+        <div class="modal" tabindex="-1" id="proposalmodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Thank you!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success" role="alert">
+                        Proposal has been sent to your email address. Thank you for your interest!
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--Proforma Invoice Sent modal-->
+        <div class="modal" tabindex="-1" id="proformainvmodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Thank you!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success" role="alert">
+                        Proforma Invoice has been sent to your email address. Thank you for your interest. <br>For any enquires, please contact us on info@echobooom.com or +917715957105 <br>(10 AM to 5:30 PM)
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="container-fluid bottom-bar fixed-bottom"> <!--Bottom Bar-->
+            <div class="row text-center">
+                <div class="col">
+                    <a href="daily_data.html" class="text-decoration-none" style="pointer-events: none; color: #b0b0b0;">
+                        <i class="bi bi-graph-up" style="font-size: 1.5rem;"></i>
+                        <p class="mb-0">Daily Data</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="reports.html" class="text-decoration-none" style="pointer-events: none; color: #b0b0b0;">
+                        <i class="bi bi-file-earmark-text" style="font-size: 1.5rem;"></i>
+                        <p class="mb-0" id="report_dashboard_button1">Reports</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="dashboard.html" class="text-decoration-none active-link" style="pointer-events: none; color: #b0b0b0;">
+                        <i class="bi bi-speedometer2" style="font-size: 1.5rem;"></i>
+                        <p class="mb-0">Dashboard</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="orders.html" class="text-decoration-none" style="pointer-events: none; color: #b0b0b0;">
+                        <i class="bi bi-box-seam" style="font-size: 1.5rem;"></i>
+                        <p class="mb-0">Orders</p>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="business.html" class="text-decoration-none" style="pointer-events: none; color: #b0b0b0;">
+                        <i class="bi bi-briefcase" style="font-size: 1.5rem;"></i>
+                        <p class="mb-0" id="bussiness_button">Business</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+            <!--Side Bar-->
+            <div class="sidebar" id="sidebar">
+                <button class="btn btn-dark" id="closeSidebar">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <a href="myprofile.html"><i class="bi bi-person-fill me-2"></i>Your Profile</a> <!--Need to make a HTML file-->
+                <a href="passwordreset.html"><i class="bi bi-lock-fill me-2"></i>Change Password</a>
+                <a href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Log out</a>
+                <div class="user-info">
+                    <p><strong>Username:</strong> Gabriel</p>
+                    <p><strong>EB Code:</strong> EB-001098</p>
+                    <p><strong>Phone:</strong> 9741256713</p>
+                </div>
+            </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('send-verification-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('otp-request-text').style.display = 'none';
+    this.style.display = 'none';
+    document.getElementById('otp-verification-section').style.display = 'block';
+  });
+
+        document.getElementById('toggleSidebar').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('active');
+        });
+
+        document.getElementById('toggleCartSidebar').addEventListener('click', function () {
+var cartSidebar = new bootstrap.Offcanvas(document.getElementById('cartSidebar'));
+cartSidebar.show();
+});
+document.querySelectorAll('.decrease-btn').forEach(button => {
+button.addEventListener('click', function() {
+let quantityInput = this.nextElementSibling;
+let currentValue = parseInt(quantityInput.value);
+if (currentValue > 1) {
+  quantityInput.value = currentValue - 1;
+}
+});
+});
+
+document.querySelectorAll('.increase-btn').forEach(button => {
+button.addEventListener('click', function() {
+let quantityInput = this.previousElementSibling;
+let currentValue = parseInt(quantityInput.value);
+quantityInput.value = currentValue + 1;
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Reports</title>
+</head>
+<body>
+    <div id="wrapBox_sheepfactor">
+        <!-- Top Navbar -->
+        <div class="custom-navbar navbar-light bg-light sticky-top">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Hamburger Menu -->
+                <button class="btn btn-light" id="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                
+                <!-- Small Logo -->
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="https://echobooom.com/wp-content/uploads/2021/01/ECHOBOOOM-LOGO-1.png" alt="Logo">
+                </a>
+    
+                <!-- Search Icon -->
+                <button class="btn btn-light ms-auto" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchModalLabel" style="font-weight: 700;">Quick Search</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="ebCode" class="form-label">Search by Customer's phone number</label>
+                                <input type="tel" class="form-control" id="ebCode" placeholder="Phone Number">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="custom-header text-center" style="background-color: black; color: white;">
+                        Sheep Factor    
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="custom-form-container">
+                        <div class="container">
+                            <form>
+                                <label for="industryDataList" class="form-label">Search by Industry</label>
+                                <input class="form-control" list="datalistOptions" id="industryDataList" placeholder="Industry or Company name">
+                                <datalist id="datalistOptions">
+                                <option value="Data 1">
+                                <option value="Data 2">
+                                <option value="Data 3">
+                                <option value="Data 4">
+                                <option value="Data 5">
+                                <option value="Data 6">
+                                </datalist>
+                                <label for="industryDataList" class="form-label mt-4">Search in Pincode</label>
+                                <input class="form-control" list="datalistOptions" id="industryDataList" placeholder="City, Area or Pincode">
+                                <datalist id="datalistOptions">
+                                <option value="Data 1">
+                                <option value="Data 2">
+                                <option value="Data 3">
+                                <option value="Data 4">
+                                <option value="Data 5">
+                                <option value="Data 6">
+                                </datalist>
+                                    <div class="d-grid gap-2 mt-4"><a href="#" class="btn btn-primary">Show Data</a></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="sidebar" id="sidebar">
+            <button class="btn btn-light mb-3" id="closeSidebar">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <a href="myprofile.html"><i class="bi bi-person-fill me-2"></i>Your Profile</a> <!--Need to make a HTML file-->
+            <a href="passwordreset.html"><i class="bi bi-lock-fill me-2"></i>Change Password</a>
+            <a href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Log out</a>
+            <div class="user-info">
+                <p><strong>Username:</strong> Gabriel</p>
+                <p><strong>EB Code:</strong> EB-001098</p>
+                <p><strong>Phone:</strong> 9741256713</p>
+            </div>
+        </div>
+            <div class="container-fluid bottom-bar fixed-bottom"> <!--Bottom Bar-->
+                <div class="row text-center">
+                    <div class="col">
+                        <a href="daily_data.html" class="text-decoration-none">
+                            <i class="bi bi-graph-up" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Daily Data</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="reports.html" class="text-decoration-none">
+                            <i class="bi bi-file-earmark-text" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0" id="report_dashboard_button1">Reports</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="dashboard.html" class="text-decoration-none active-link">
+                            <i class="bi bi-speedometer2" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Dashboard</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="orders.html"    class="text-decoration-none">
+                            <i class="bi bi-box-seam" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Orders</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="business.html" class="text-decoration-none">
+                            <i class="bi bi-briefcase" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Business</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('toggleSidebar').addEventListener('click', function() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('active');
+            });
+    
+            document.getElementById('closeSidebar').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.remove('active');
+            });
+        </script>
+    </body>
+    </html>

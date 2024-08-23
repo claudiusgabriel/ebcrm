@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #bussiness_button {
+            background-color: #0390ff;
+            color: white;
+            border-radius: 5px;
+        }
+        .quantity-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .quantity-buttons button {
+            width: 30px;
+            height: 30px;
+        }
+        .quantity-buttons input {
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Name Cards</title>
+</head>
+<body>
+        <!-- Top Navbar -->
+        <div class="custom-navbar navbar-light bg-light sticky-top">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Hamburger Menu -->
+                <button class="btn btn-light" id="toggleSidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                
+                <!-- Small Logo -->
+                <a class="navbar-brand mx-auto" href="#">
+                    <img src="https://echobooom.com/wp-content/uploads/2021/01/ECHOBOOOM-LOGO-1.png" alt="Logo">
+                </a>
+        
+                <!-- Cart Icon -->
+                <button class="btn btn-light ms-auto" id="toggleCartSidebar">
+                    <i class="bi bi-cart-fill" style="margin-left: 20px; font-size: 25px;"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Cart Sidebar -->
+        <div id="cartSidebar" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="cartSidebarLabel" style="width: 300px;">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="cartSidebarLabel">Cart Items</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- Cart items go here -->
+                <p>Your cart is empty.</p>
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+        
+        <!-- Checkout Modal -->
+        <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="checkoutModalLabel">Select Customer Type</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please select Customer Type:</p>
+                        <a href="existingcustomer.html" class="btn btn-primary">Existing Customer</a>
+                        <a href="newcustomer.html" class="btn btn-success">New Customer</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div id="wrapBox_namecard" class="container-fluid p-3">
+            <!--Product Search and filters-->
+            <div class="container-fluid" style="width:auto; background-color: white; padding: 10px; border-radius: 5px;">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Products">
+                    <button class="btn btn-primary" type="button" style="border-radius: 0px 10px 10px 0px;">Search</button>
+                    <div class="dropdown" style="margin-left: 10px;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Filter
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Newest</a></li>
+                            <li><a class="dropdown-item" href="#">Best Selling</a></li>
+                            <li><a class="dropdown-item" href="#">Price - Low to High</a></li>
+                            <li><a class="dropdown-item" href="#">Price - High to Low</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+            <!--Product Sections-->
+            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: rgb(29, 29, 29); height: 50px; border-radius: 10px 10px 0px 0px;">
+                <h5 class="text-center" style="color: white; line-height: 50px; font-weight: 400;">Name Cards</h5>
+            </div>
+            <div class="container-fluid" style="width:auto; height: 220px; background-color: white;">
+                <div class="d-flex align-items-center">
+                    <img src="MULTI COLOR.jpg" alt="Product Image" style="width: auto; height: 60px; margin-right: 10px; margin-top: 10px;">
+                    <label class="form-label mt-2" style="font-weight: 600;">Name Card 
+                    <br><span class="badge bg-success square-pill">₹ 2,183 Incl. tax</span></label>
+                </div>
+                <div class="mb-3 mt-2">
+                    <label for="exampleFormControlInput1" class="form-label">Name on Card (Comma Separated)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name here">
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <button class="btn btn-primary d-flex align-items-center justify-content-center decrease-btn" style="height: 35px; width: 35px; margin-left: 0px;">-</button>
+                    <input type="text" class="quantity" value="1" readonly style="width: 50px; text-align: center; height: 35px; margin-left: 5px; margin-right: 5px;">
+                    <button class="btn btn-primary d-flex align-items-center justify-content-center increase-btn" style="height: 35px; width: 35px;">+</button>
+                    <button class="btn btn-primary choose-product-btn" style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#productModal">Choose Product</button>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="productModalLabel">Upload Product Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="subscriptionSelect" class="form-label">Select Subscription</label>
+                                <select class="form-select" id="subscriptionSelect">
+                                    <option value="1 Year">1 Year</option>
+                                    <option value="2 Years">2 Years</option>
+                                    <option value="3 Years">3 Years</option>
+                                    <option value="Lifetime">Lifetime</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subscriptionPrice" class="form-label">Subscription Price</label>
+                                <input type="number" class="form-control" id="subscriptionPrice" placeholder="Enter price" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="warrantyRadio" id="warrantyRadio" required>
+                                    <label class="form-check-label" for="warrantyRadio">
+                                        Add Warranty
+                                    </label>
+                                </div>
+                                <input type="number" class="form-control mt-2" id="warrantyPrice" placeholder="Enter warranty price" required>
+                                <label id="warrantyValidity" class="form-label mt-2">Warranty valid up to: [Date]</label>
+                                <div class="mb-3">
+                                    <label for="comments" class="form-label">Additional Comments</label>
+                                    <textarea class="form-control" id="comments" rows="2" placeholder="Add comments here..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="container-fluid bottom-bar fixed-bottom"> <!--Bottom Bar-->
+                <div class="row text-center">
+                    <div class="col">
+                        <a href="daily_data.html" class="text-decoration-none">
+                            <i class="bi bi-graph-up" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Daily Data</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="reports.html" class="text-decoration-none">
+                            <i class="bi bi-file-earmark-text" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0" id="report_dashboard_button1">Reports</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="dashboard.html" class="text-decoration-none active-link">
+                            <i class="bi bi-speedometer2" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Dashboard</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="orders.html"    class="text-decoration-none">
+                            <i class="bi bi-box-seam" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0">Orders</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="business.html" class="text-decoration-none">
+                            <i class="bi bi-briefcase" style="font-size: 1.5rem;"></i>
+                            <p class="mb-0" id="bussiness_button">Business</p>
+                        </a>
+                    </div>
+                </div>
+                <!--Side Bar-->
+                <div class="sidebar" id="sidebar">
+                    <button class="btn btn-dark" id="closeSidebar">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                    <a href="myprofile.html"><i class="bi bi-person-fill me-2"></i>Your Profile</a> <!--Need to make a HTML file-->
+                    <a href="passwordreset.html"><i class="bi bi-lock-fill me-2"></i>Change Password</a>
+                    <a href="index.html"><i class="bi bi-box-arrow-right me-2"></i>Log out</a>
+                    <div class="user-info">
+                        <p><strong>Username:</strong> Gabriel</p>
+                        <p><strong>EB Code:</strong> EB-001098</p>
+                        <p><strong>Phone:</strong> 9741256713</p>
+                    </div>
+                </div>
+            </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.getElementById('addToCartBtn').addEventListener('click', function() {
+    // Code to add product to cart
+    const cartSidebar = document.getElementById('cartSidebar');
+    cartSidebar.innerHTML += `
+        <div class="cart-item">
+            <p>Product: Name Card</p>
+            <p>Subscription: ${document.getElementById('subscriptionSelect').value}</p>
+            <p>Subscription Price: ₹${document.getElementById('subscriptionPrice').value}</p>
+            <p>Warranty Price: ₹${document.getElementById('warrantyPrice').value}</p>
+            <p>${document.getElementById('warrantyValidity').innerText}</p>
+        </div>
+    `;
+    // Show red dot on cart icon
+    document.getElementById('toggleCartSidebar').classList.add('cart-has-items');
+    // Close the modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+    modal.hide();
+});
+
+
+            document.getElementById('toggleSidebar').addEventListener('click', function() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('active');
+            });
+    
+            document.getElementById('closeSidebar').addEventListener('click', function() {
+                document.getElementById('sidebar').classList.remove('active');
+            });
+
+            document.getElementById('toggleCartSidebar').addEventListener('click', function () {
+    var cartSidebar = new bootstrap.Offcanvas(document.getElementById('cartSidebar'));
+    cartSidebar.show();
+});
+document.querySelectorAll('.decrease-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    let quantityInput = this.nextElementSibling;
+    let currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+      quantityInput.value = currentValue - 1;
+    }
+  });
+});
+
+document.querySelectorAll('.increase-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    let quantityInput = this.previousElementSibling;
+    let currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+  });
+});
+    </script>
+    </body>
+    </html>
