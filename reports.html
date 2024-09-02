@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         #report_dashboard_button1 {
-            background-color: #0390ff;
+            background-color: #d4a34f;
             color: white;
             border-radius: 5px;
         }
@@ -16,7 +16,7 @@
     <title>Reports</title>
 </head>
 <body>
-    <div id="wrapBox5">
+    <div id="wrapBox_reports">
         <!-- Top Navbar -->
         <div class="custom-navbar navbar-light bg-light sticky-top">
             <div class="container-fluid d-flex align-items-center">
@@ -40,28 +40,28 @@
         <div class="container-fluid mt-4">
             <div class="row">
                 <div class="col-12">
-                    <div class="custom-header text-center">
+                    <div class="custom-header text-center" style="background-color: #d4a34f; color: #3c1f17;">
                         Reports
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="custom-subheader text-center">
-                        Please select Date range
+                    <div class="custom-subheader text-center" style="background-color: white; color: #593a2e;">
+                        Please Select Date Range
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="custom-form-container">
+                    <div class="custom-form-container" style="background-color: #f5e6d7;">
                         <div class="container">
                             <form>
-                                <div class="mb-3">
+                                <div class="mb-1">
                                     <label for="fromDate" class="form-label">Select from date</label>
-                                    <input type="date" class="form-control" id="fromDate">
+                                    <input type="date" class="form-control mb-2" id="fromDate">
                                 </div>
                                 <div class="mb-3">
                                     <label for="toDate" class="form-label">Select to date</label>
                                     <input type="date" class="form-control" id="toDate">
                                 </div>
-                                    <div class="d-grid gap-2 mt-2"><a href="#" class="btn btn-primary">Get Reports</a></div>
+                                    <div class="d-grid gap-2 mt-2"><a href="#" style="background-color: #d4a34f;" class="btn">Get Reports</a></div>
                             </form>
                         </div>
                     </div>
@@ -104,6 +104,26 @@
                 <li class="list-group-item d-flex justify-content-between align-items-center" style="font-weight: 600">
                     Subscriptions
                   <span class="badge bg-info rounded-pill">₹ 0000</span>
+                </li>
+              </ul>
+              
+        </div>
+        <div class="container-fluid mt-3" id="report_summary_box" style="width: auto;">
+            <ul class="list-group">
+                <li class="list-group-item text-center" style="font-weight: 500; background-color: #d4a34f; border: none; color: #3c1f17;">
+                    Roadtrip Recharge
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"style="font-weight: 600">
+                    Cheques Bounced
+                  <span class="badge bg-danger rounded-pill">0000</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center" style="font-weight: 600">
+                    Refunds
+                  <span class="badge bg-warning rounded-pill" style="color: black;">0000</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center" style="font-weight: 600">
+                    Rejects
+                  <span class="badge bg-danger rounded-pill">0000</span>
                 </li>
               </ul>
               

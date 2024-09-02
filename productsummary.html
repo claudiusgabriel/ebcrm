@@ -32,13 +32,13 @@
         </div>
         </div>
         <div id="wrapBox_existingcustomer" class="container-fluid p-3">
-            <div class="container-fluid mt-1" id="daily_data_box" style="width: auto; background-color: rgb(29, 29, 29); height: 50px; border-radius: 10px 10px 0px 0px;">
-                <h5 class="text-center" style="color: white; line-height: 50px; font-weight: 400;">Product Summary</h5>
+            <div class="container-fluid mt-1" id="daily_data_box" style="width: auto; background-color: #d4a34f; height: 50px; border-radius: 10px 10px 0px 0px;">
+                <h5 class="text-center" style="color: black; line-height: 50px; font-weight: 400;">Product Summary</h5>
             </div>
             <div class="container-fluid p-3" style="width:auto; height: 250px; background-color: white; border-radius: 0px 0px 10px 10px;">
                 <div class="d-flex">
                     <h3>Billing Summary</h3>
-                    <a href="#"> <i class="bi bi-pencil-square" style="font-size: 20px; margin-left: 10px;"></i> </a> 
+                    <a href="#"> <i class="bi bi-pencil-square" style="font-size: 20px; margin-left: 10px; color: #6e2a24;"></i> </a> 
                 </div>
                 <hr style="border: 1px solid grey; margin: 0;">
                 <ul class="list-group mt-3">
@@ -48,13 +48,13 @@
                     <li class="list-group-item">Customer Name:</li>
                   </ul>
             </div>
-            <div class="container-fluid p-3 mt-2" style="width:auto; height: 410px; background-color: white; border-radius: 10px;">
+            <div class="container-fluid p-3 mt-2" style="width:auto; height: 410px; background-color: #f5e6d7; border-radius: 10px;">
                 <h3>Products in Cart</h3>
                 <hr style="border: 1px solid grey; margin: 0;">
                 <!--Product in Cart Dummy-->
                 <div class="card mt-3">
                     <div class="card-header" style="font-weight: 600;">
-                        <a href="#"><i class="bi bi-trash3-fill"></i></a>
+                        <a href="#"><i class="bi bi-trash3-fill" style="color: red;"></i></a>
                       Product 1 - Name and Logo Card
                     </div>
                     <div class="card-body">
@@ -78,9 +78,9 @@
                     </div>
                   </div>
                   <div class="d-grid gap-2 mt-2">
-                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#otpmodal"> Place Order </button>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#proposalmodal"> Send Proposal </button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proformainvmodal"> Send Proforma Invoice </button>
+                    <button type="button" class="btn btn" style="background-color: #d4a34f; color: black;" data-bs-toggle="modal" data-bs-target="#otpmodal"> Place Order </button>
+                    <button type="button" class="btn btn" style="background-color: #3c1f17; color: white;" data-bs-toggle="modal" data-bs-target="#proposalmodal"> Send Proposal </button>
+                    <button type="button" class="btn btn" style="background-color: #6e2a24; color: white;" data-bs-toggle="modal" data-bs-target="#proformainvmodal"> Send Proforma Invoice </button>
                   </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="modal-body">
                   <p id="otp-request-text">Request OTP to process further</p>
-                  <a href="#" id="send-verification-btn" class="btn btn-primary">Send Verification Code</a>
+                  <a href="#" id="send-verification-btn" class="btn btn" style="background-color: #6e2a24; color: white;">Send Verification Code</a>
           
                   <!-- Elements that should appear after clicking "Send Verification Code" -->
                   <div id="otp-verification-section" style="display:none; margin-top: 15px;">

@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         #bussiness_button {
-            background-color: #0390ff;
-            color: white;
+            background-color: #d4a34f;
             border-radius: 5px;
         }
         .quantity-buttons {
@@ -48,22 +47,23 @@
             </div>
         </div>
         
-        <!-- Cart Sidebar -->
-        <div id="cartSidebar" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="cartSidebarLabel" style="width: 300px;">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="cartSidebarLabel">Cart Items</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <!-- Cart items go here -->
-                <p>Your cart is empty.</p>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+         <!-- Cart Sidebar -->
+         <div id="cartSidebar" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="cartSidebarLabel" style="width: 300px;">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="cartSidebarLabel">Cart Items</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+              <!-- Cart items go here -->
+              <p>Your cart is empty.</p>
+              <button type="button" class="btn btn mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal" style="background-color: #593a2e; color: white;">
                   Proceed to Checkout
               </button>
-            </div>
-        </div>
-        <!-- Checkout Modal -->
-        <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+          </div>
+      </div>
+      
+      <!-- Checkout Modal -->
+      <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
           <div class="modal-dialog">
               <div class="modal-content">
                   <div class="modal-header">
@@ -72,31 +72,33 @@
                   </div>
                   <div class="modal-body">
                       <p>Please select Customer Type:</p>
-                      <a href="existingcustomer.html" class="btn btn-primary">Existing Customer</a>
-                      <a href="newcustomer.html" class="btn btn-success">New Customer</a>
+                      <a href="existingcustomer.html" class="btn btn" style="background-color: #593a2e; color: white;">Existing Customer</a>
+                      <a href="newcustomer.html" class="btn btn" style="background-color: #d4a34f; color: white;">New Customer</a>
                   </div>
               </div>
           </div>
+      </div>    
       </div>        
         <div id="wrapBox_12" class="container-fluid p-3">
             <!--Product Search and filters-->
+            <!--Product Search and filters-->
             <div class="container-fluid" style="width:auto; background-color: white; padding: 10px; border-radius: 5px;">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search Products">
-                    <button class="btn btn-primary" type="button" style="border-radius: 0px 10px 10px 0px;">Search</button>
-                    <div class="dropdown" style="margin-left: 10px;">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            Filter
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Newest</a></li>
-                            <li><a class="dropdown-item" href="#">Best Selling</a></li>
-                            <li><a class="dropdown-item" href="#">Price - Low to High</a></li>
-                            <li><a class="dropdown-item" href="#">Price - High to Low</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>         
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search Products">
+                  <button class="btn btn" type="button" style="border-radius: 0px 10px 10px 0px; background-color: #593a2e; color: white;">Search</button>
+                  <div class="dropdown" style="margin-left: 10px;">
+                      <button class="btn btn dropdown-toggle" type="button" style="background-color: #593a2e; color: white;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          Filter
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <li><a class="dropdown-item" href="#">Newest</a></li>
+                          <li><a class="dropdown-item" href="#">Best Selling</a></li>
+                          <li><a class="dropdown-item" href="#">Price - Low to High</a></li>
+                          <li><a class="dropdown-item" href="#">Price - High to Low</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>          
             <!-- Common Modal for All Products -->
             <div class="modal fade" id="gsvModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-sm">
@@ -140,19 +142,19 @@
                           <label class="form-label mt-2" style="font-weight: 600; display: block;">Search the location on Google Maps</label>
                 <div class="input-group mt-2">
                   <input type="text" class="form-control" placeholder="Search location">
-                  <button class="btn btn-primary" type="button" style="margin-left: 5px;"><i class="bi bi-crosshair2"></i></button>
-                  <button class="btn btn-primary" type="button" style="margin-left: 5px;">Submit Location</button>
+                  <button class="btn btn" type="button" style="margin-left: 5px; background-color: #d4a34f;"><i class="bi bi-crosshair2"></i></button>
+                  <button class="btn btn" type="button" style="margin-left: 5px; background-color: #d4a34f; color: black;">Submit Location</button>
                 </div>
                       </div>
                       <div class="modal-footer">
-                          <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                          <button type="button" class="btn btn" id="addToCartBtn">Add to Cart</button>
                       </div>
                   </div>
               </div>
           </div>
             <!--Product Sections-->
-            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: rgb(29, 29, 29); height: 50px; border-radius: 10px 10px 0px 0px;">
-                <h5 class="text-center" style="color: white; line-height: 50px; font-weight: 400;">Virtual Tours - Google Street View</h5>
+            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: #d4a34f; height: 50px; border-radius: 10px 10px 0px 0px;">
+                <h5 class="text-center" style="color: black; line-height: 50px; font-weight: 400;">Virtual Tours - Google Street View</h5>
             </div>
             <div class="container-fluid" style="width:auto; height: 120px; background-color: white;">
                 <label class="form-label mt-2" style="font-weight: 600;">360 Photography Premium <span class="badge bg-success square-pill">₹ 7,670 incl. tax</span></label>

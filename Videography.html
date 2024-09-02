@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         #bussiness_button {
-            background-color: #0390ff;
-            color: white;
+            background-color: #d4a34f;
             border-radius: 5px;
         }
         .quantity-buttons {
@@ -57,11 +56,12 @@
             <div class="offcanvas-body">
                 <!-- Cart items go here -->
                 <p>Your cart is empty.</p>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+                <button type="button" class="btn btn mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal" style="background-color: #593a2e; color: white;">
                     Proceed to Checkout
                 </button>
             </div>
         </div>
+        
         <!-- Checkout Modal -->
         <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -72,20 +72,20 @@
                     </div>
                     <div class="modal-body">
                         <p>Please select Customer Type:</p>
-                        <a href="existingcustomer.html" class="btn btn-primary">Existing Customer</a>
-                        <a href="newcustomer.html" class="btn btn-success">New Customer</a>
+                        <a href="existingcustomer.html" class="btn btn" style="background-color: #593a2e; color: white;">Existing Customer</a>
+                        <a href="newcustomer.html" class="btn btn" style="background-color: #d4a34f; color: white;">New Customer</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
         <div id="wrapBox_videography" class="container-fluid p-3">
             <!--Product Search and filters-->
             <div class="container-fluid" style="width:auto; background-color: white; padding: 10px; border-radius: 5px;">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search Products">
-                    <button class="btn btn-primary" type="button" style="border-radius: 0px 10px 10px 0px;">Search</button>
+                    <button class="btn btn" type="button" style="border-radius: 0px 10px 10px 0px; background-color: #593a2e; color: white;">Search</button>
                     <div class="dropdown" style="margin-left: 10px;">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button class="btn btn dropdown-toggle" type="button" style="background-color: #593a2e; color: white;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                             Filter
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -96,10 +96,10 @@
                         </ul>
                     </div>
                 </div>
-            </div>            
+            </div>              
             <!--Product Sections-->
-            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: rgb(29, 29, 29); height: 50px; border-radius: 10px 10px 0px 0px;">
-                <h5 class="text-center" style="color: white; line-height: 50px; font-weight: 400;">Videography</h5>
+            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: #d4a34f; height: 50px; border-radius: 10px 10px 0px 0px;">
+                <h5 class="text-center" style="color: black; line-height: 50px; font-weight: 400;">Videography</h5>
             </div>
             <div class="container-fluid" style="width:auto; height: 200px; background-color: white;">
                 <label class="form-label mt-2" style="font-weight: 600;">Videography Services <span class="badge bg-success square-pill">₹ 3,186 incl. tax</span></label>
@@ -108,13 +108,13 @@
                   <button class="btn btn-primary d-flex align-items-center justify-content-center decrease-btn" style="height: 35px; width: 35px;">-</button>
                   <input type="text" class="quantity" value="1" readonly style="width: 50px; text-align: center; height: 35px; margin-left: 5px; margin-right: 5px;">
                   <button class="btn btn-primary d-flex align-items-center justify-content-center increase-btn" style="height: 35px; width: 35px;">+</button>
-                  <button class="btn btn-primary" style="margin-left: 10px;">Add to Cart</button>
+                  <button class="btn btn" style="margin-left: 10px; background-color: #d4a34f; color: black;">Add to Cart</button>
                 </div>
                 <label class="form-label mt-2" style="font-weight: 600; display: block;">Search the location on Google Maps</label>
                 <div class="input-group mt-2">
                   <input type="text" class="form-control" placeholder="Search location">
-                  <button class="btn btn-primary" type="button" style="margin-left: 5px;"><i class="bi bi-crosshair2"></i></button>
-                  <button class="btn btn-primary" type="button" style="margin-left: 5px;">Submit Location</button>
+                  <button class="btn btn" type="button" style="margin-left: 5px; background-color: #d4a34f;"><i class="bi bi-crosshair2"></i></button>
+                  <button class="btn btn" type="button" style="margin-left: 5px; background-color: #d4a34f; color: black;">Submit Location</button>
                 </div>
               </div>
             <hr style="border: 1px solid grey; margin: 0;">
@@ -125,13 +125,13 @@
                   <button class="btn btn-primary d-flex align-items-center justify-content-center decrease-btn" style="height: 35px; width: 35px;">-</button>
                   <input type="text" class="quantity" value="1" readonly style="width: 50px; text-align: center; height: 35px; margin-left: 5px; margin-right: 5px;">
                   <button class="btn btn-primary d-flex align-items-center justify-content-center increase-btn" style="height: 35px; width: 35px;">+</button>
-                  <button class="btn btn-primary" style="margin-left: 10px;">Add to Cart</button>
+                  <button class="btn btn" style="margin-left: 10px; background-color: #d4a34f; color: black;">Add to Cart</button>
                 </div>
                 <label class="form-label mt-2" style="font-weight: 600; display: block;">Search the location on Google Maps</label>
                 <div class="input-group mt-2">
                   <input type="text" class="form-control" placeholder="Search location">
-                  <button class="btn btn-primary" type="button" style="margin-left: 5px;"><i class="bi bi-crosshair2"></i></button>
-                  <button class="btn btn-primary" type="button" style="margin-left: 5px;">Submit Location</button>
+                  <button class="btn btn" type="button" style="margin-left: 5px; background-color: #d4a34f;"><i class="bi bi-crosshair2"></i></button>
+                  <button class="btn btn" type="button" style="margin-left: 5px; background-color: #d4a34f; color: black;">Submit Location</button>
                 </div>
               </div>
             <div class="container-fluid bottom-bar fixed-bottom"> <!--Bottom Bar-->

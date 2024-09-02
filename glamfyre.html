@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         #bussiness_button {
-            background-color: #0390ff;
-            color: white;
+            background-color: #d4a34f;
             border-radius: 5px;
         }
         .quantity-buttons {
@@ -57,11 +56,12 @@
             <div class="offcanvas-body">
                 <!-- Cart items go here -->
                 <p>Your cart is empty.</p>
-                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+                <button type="button" class="btn btn mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal" style="background-color: #593a2e; color: white;">
                     Proceed to Checkout
                 </button>
             </div>
         </div>
+        
         <!-- Checkout Modal -->
         <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -72,16 +72,16 @@
                     </div>
                     <div class="modal-body">
                         <p>Please select Customer Type:</p>
-                        <a href="existingcustomer.html" class="btn btn-primary">Existing Customer</a>
-                        <a href="#" class="btn btn-success">New Customer</a>
+                        <a href="existingcustomer.html" class="btn btn" style="background-color: #593a2e; color: white;">Existing Customer</a>
+                        <a href="newcustomer.html" class="btn btn" style="background-color: #d4a34f; color: white;">New Customer</a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <div id="wrapBox_digimarketing" class="container-fluid p-3">
             <!--Product Sections-->
-            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: rgb(29, 29, 29); height: 50px; border-radius: 10px 10px 0px 0px;">
-                <h5 class="text-center" style="color: white; line-height: 50px; font-weight: 400;">GlamFyre</h5>
+            <div class="container-fluid mt-3" id="daily_data_box" style="width: auto; background-color: #d4a34f; height: 50px; border-radius: 10px 10px 0px 0px;">
+                <h5 class="text-center" style="color: black; line-height: 50px; font-weight: 400;">GlamFyre</h5>
             </div>
             <div class="container-fluid" style="width:auto; height: 150px; background-color: white;">
                 <label class="form-label mt-2" style="font-weight: 600;">GlamFyre Premium 
@@ -91,7 +91,7 @@
                   <button class="btn btn-primary d-flex align-items-center justify-content-center decrease-btn" style="height: 35px; width: 35px;">-</button>
                   <input type="text" class="quantity" value="1" readonly style="width: 50px; text-align: center; height: 35px; margin-left: 5px; margin-right: 5px;">
                   <button class="btn btn-primary d-flex align-items-center justify-content-center increase-btn" style="height: 35px; width: 35px;">+</button>
-                  <button class="btn btn-primary" style="margin-left: 10px;">Add to Cart</button>
+                  <button class="btn btn" style="margin-left: 10px; background-color: #d4a34f; color: black;">Add to Cart</button>
                 </div>
               </div>
         </div>

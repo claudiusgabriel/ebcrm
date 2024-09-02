@@ -6,7 +6,7 @@
 .wrapBox {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #loginBox {
@@ -19,7 +19,7 @@
 .wrapBox1 {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #navBox {
@@ -53,13 +53,13 @@
 #wrapBox3 {
     width: 100%;
     height: 140vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #signupBox {
     width: 400px;
     height: 1000px;
-    background: linear-gradient(rgb(255, 255, 255), rgb(227, 227, 227));
+    background-color: #f5e6d7;
     border-radius: 0px 0px 10px 10px;
 }
 
@@ -71,24 +71,17 @@
     margin-bottom: 30px;
 }
 
-#signupBtn1 {
-    background-color: #0390ff;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    margin-top: 25px;
-}
 
 #pasres_wrapBox {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #tp-Box {
     width: 400px;
     height:100px;
-    background: linear-gradient(rgb(0, 0, 0), rgb(42, 42, 42));
+    background-color: #d4a34f;
     border-radius: 10px 10px 0px 0px;
 }
 #tp-Box1 {
@@ -114,13 +107,13 @@
 #wrapBox4 {
     width: 100%;
     height: 95vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 /*bottom Bar Sticky*/
 
 .bottom-bar {
-    background-color: #ffffff;
+    background-color: white;
     border-radius: 15px 15px 0px 0px;
   }
   .bottom-bar .col {
@@ -191,13 +184,13 @@
 #wrapBox5 {
     width: 100%;
     height: 110vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_myprofile {
     width: 100%;
     height: 135vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 /*Reports Date Box CSS*/
@@ -228,105 +221,123 @@
 #wrapBox6 {
     width: 100%;
     height: 90vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
+}
+
+#wrapBox_reports {
+    width: 100%;
+    height: 130vh;
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox7 {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox8 {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_10 {
     width: 100%;
     height: 130vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_12 {
     width: 100%;
     height: 166vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_HDpics {
     width: 100%;
     height: 105vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_gmb {
     width: 100%;
     height: 80vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_videography {
     width: 100%;
     height: 80vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_gservices {
     width: 100%;
     height: 80vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_unogreen {
     width: 100%;
     height: 90vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_namecard {
     width: 100%;
     height: 110vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_digimarketing {
     width: 100%;
     height: 90vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_kit {
     width: 100%;
     height: 150vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
     
 #wrapBox_reviewcards {
     width: 100%;
     height: 110vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_tapmate {
     width: 100%;
     height: 90vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 #wrapBox_sheepfactor {
     width: 100%;
     height: 90vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 #wrapBox_existingcustomer {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
 }
 
 #wrapBox_newcustomer {
     width: 100%;
     height: 110vh;
-    background: linear-gradient( #0390ff ,  #7603ff);
+    background: linear-gradient(#3c1f17, #6e2a24);
+}
+
+#addToCartBtn {
+    background-color: #593a2e; color: white;
+}
+
+.btn.btn-primary.d-flex.align-items-center.justify-content-center.decrease-btn,
+.btn.btn-primary.d-flex.align-items-center.justify-content-center.increase-btn,
+.btn.btn-primary.choose-product-btn {
+    background-color: #d4a34f;
+    color: black;
+    border: none;
 }
